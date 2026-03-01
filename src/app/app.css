@@ -1,0 +1,317 @@
+:host {
+  --bg-dark: #010409;
+  --neon-green: #39ff14;
+  --neon-cyan: #00f2fe;
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --border-muted: rgba(57, 255, 20, 0.15);
+  --btn-hover: rgba(57, 255, 20, 0.1);
+
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  display: block;
+}
+
+.hacker-wrapper {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: normal;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hacker-container {
+  width: 100%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.terminal-prompt {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+.user {
+  color: #58a6ff;
+  font-weight: bold;
+}
+
+.dir {
+  color: var(--text-primary);
+  margin-right: 8px;
+}
+
+.cmd {
+  color: var(--neon-green);
+}
+
+.glow-title {
+  color: var(--neon-green);
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.5);
+  font-size: clamp(25px, 5vw, 45px);
+  margin: 15px 0;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.hacker-subtitle {
+  color: var(--neon-cyan);
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+.terminal-nav {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border-muted);
+  padding-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-btn:hover {
+  color: var(--neon-green);
+}
+
+.nav-btn.active {
+  color: var(--neon-green);
+  font-weight: bold;
+}
+
+.nav-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+}
+
+.main-content {
+  min-height: 400px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.terminal-output {
+  margin-bottom: 40px;
+  padding-left: 15px;
+  border-left: 2px solid var(--border-muted);
+}
+
+.bio-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+  opacity: 0.9;
+  max-width: 800px;
+}
+
+.skills-object {
+  margin: 40px 0;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.prompt {
+  color: var(--neon-green);
+  font-weight: bold;
+}
+
+.prompt-arrow {
+  color: var(--neon-green);
+  margin-right: 10px;
+}
+
+.var {
+  color: #d2a8ff;
+}
+
+.array-bracket {
+  color: #ff7b72;
+}
+
+.string-val {
+  color: #a5d6ff;
+}
+
+.muted {
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.experience-list {
+  margin-top: 20px;
+}
+
+.experience-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-muted);
+  padding: 25px;
+  margin-bottom: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.experience-item:hover {
+  border-color: var(--neon-green);
+}
+
+.exp-title {
+  color: var(--neon-cyan);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.exp-meta {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.exp-company {
+  color: #d2a8ff;
+  margin-right: 15px;
+}
+
+.exp-details {
+  margin-top: 15px;
+}
+
+.exp-details li {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: flex;
+}
+
+.bullet {
+  color: var(--neon-green);
+  margin-right: 10px;
+}
+
+.hacker-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.hacker-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-muted);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.hacker-card:hover {
+  border-color: var(--neon-green);
+  background: rgba(57, 255, 20, 0.03);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon {
+  font-size: 1.1rem;
+  margin-right: 10px;
+}
+
+.card-title {
+  color: var(--neon-cyan);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.tech-stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tech-stack-badges li {
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  border: 1px solid rgba(139, 148, 158, 0.4);
+  padding: 4px 10px;
+}
+
+.github-link {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.github-link:hover {
+  color: var(--neon-green);
+}
+
+@media (max-width: 600px) {
+  .hacker-container {
+    padding: 20px;
+  }
+  .glow-title {
+    font-size: 22px;
+  }
+}
