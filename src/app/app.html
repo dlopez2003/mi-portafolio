@@ -19,7 +19,6 @@
     </header>
 
     <main class="main-content">
-
       <section *ngIf="vistaActual === 'inicio'" class="fade-in">
         <div class="terminal-output">
           <p class="bio-text">{{ perfil }}</p>
@@ -35,7 +34,27 @@
             <span *ngFor="let skill of habilidades; let last = last" class="string-val">'{{skill}}'{{!last ? ', ' : ''}}</span>
           <span class="array-bracket">];</span>
         </div>
-      </section>
+
+        <div class="action-buttons" style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 30px;">
+
+          <a href="cv.pdf" target="_blank" class="btn btn-outline" rel="noopener noreferrer" style="padding: 10px 20px; text-decoration: none; border: 1px solid #39ff14; color: #39ff14; border-radius: 4px;">
+            <span class="prompt">></span> ./ver_cv.sh
+          </a>
+
+          <a href="cv.pdf" download="CV_Dorian_Lopez.pdf" class="btn btn-outline" style="padding: 10px 20px; text-decoration: none; border: 1px solid #39ff14; color: #39ff14; border-radius: 4px;">
+            <span class="prompt">></span> ./descargar_cv.sh
+          </a>
+
+          <a href="mailto:dorian.lopez300303@gmail.com" class="btn btn-outline" style="padding: 10px 20px; text-decoration: none; border: 1px solid #39ff14; color: #39ff14; border-radius: 4px;">
+            <span class="prompt">></span> ./email.sh
+          </a>
+
+          <a href="https://wa.me/59177297925" target="_blank" class="btn btn-outline" rel="noopener noreferrer" style="padding: 10px 20px; text-decoration: none; border: 1px solid #39ff14; color: #39ff14; border-radius: 4px;">
+            <span class="prompt">></span> ./whatsapp.sh
+          </a>
+
+        </div>
+        </section>
 
       <section *ngIf="vistaActual === 'experiencia'" class="fade-in">
         <div class="terminal-prompt muted">
